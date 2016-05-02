@@ -23,14 +23,14 @@
 
 <!--	  Remember to change 3jsTemplate to your folder name!-->
 	  
-  <script src="../3jsTemplate/static/js/three.js"></script>
-	  <script src="../3jsTemplate/static/js/loaders/DDSLoader.js"></script>
-		<script src="../3jsTemplate/static/js/loaders/MTLLoader.js"></script>
-		<script src="../3jsTemplate/static/js/loaders/OBJMTLLoader.js"></script>
+  <script src="static/js/three.js"></script>
+	  <script src="static/js/loaders/DDSLoader.js"></script>
+		<script src="static/js/loaders/MTLLoader.js"></script>
+		<script src="static/js/loaders/OBJMTLLoader.js"></script>
 	
-  <script src="../3jsTemplate/static/js/StereoEffect.js"></script>
-  <script src="../3jsTemplate/static/js/DeviceOrientationControls.js"></script>
-  <script src="../3jsTemplate/static/js/OrbitControls.js"></script>
+  <script src="static/js/StereoEffect.js"></script>
+  <script src="static/js/DeviceOrientationControls.js"></script>
+  <script src="static/js/OrbitControls.js"></script>
 
   <script>
     var camera, scene, renderer, model;
@@ -98,7 +98,7 @@
     
       //the sky
       material = new THREE.MeshBasicMaterial({
-          map: THREE.ImageUtils.loadTexture("../3jsTemplate/pano.jpg"),
+          map: THREE.ImageUtils.loadTexture("pano.jpg"),
           side: THREE.DoubleSide
       });
       sky = new THREE.Mesh(new THREE.SphereGeometry(500, 60, 40 ), material);
@@ -122,7 +122,7 @@
 		THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
     
 			var loader = new THREE.OBJMTLLoader();
-				loader.load( '../3jsTemplate/model/mesh.obj', '../3jsTemplate/model/mesh.mtl', function ( object ) {
+				loader.load( 'model/mesh.obj', 'model/mesh.mtl', function ( object ) {
 					model = object;
 					//Use these to set the object's position
 					//object.position.y = 0;
